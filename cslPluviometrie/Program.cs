@@ -17,13 +17,27 @@ string rep = Console.ReadLine();
 switch (rep)
 {
     case ("1"):
-        cotedor.PluviositeMois();
+       int[] tabmax= cotedor.PluviositeMois();
+        for (int i = 0; i<11; i++)
+        {
+            Console.WriteLine("L'indice "+i +" a la valeur "+ tabmax[i]);
+        }
         break;
     case ("2"):
-        cotedor.PluviositeRegion();
+
+        int indmax = cotedor.PluviositeRegion();
+         {
+            Console.WriteLine("le mois qui a le niveau de pluviosité le plus important est le mois "+ indmax);
+        }
+            
+        ;
         break;
     case ("3"):
-        cotedor.PluviositeAnnee();
+        int res = cotedor.PluviositeAnnee();
+        {
+            Console.WriteLine("la " + res + " ville a la pluviométrie la plus importante");
+        }
+
         break;
   
 }
